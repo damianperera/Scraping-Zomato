@@ -2,7 +2,7 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var jsonfile = require('jsonfile')
-var file = '/data.json'
+var file = 'C:\\Users\\vasinpramu\\Documents\\GitHub\\Scraping-Zomato\\src\\resdata.json'
 curl = 'https://www.zomato.com/hyderabad/restaurants?page=';
 restaurantsData = []
 var currentPage = 1
@@ -36,14 +36,14 @@ function scrapeURL(url){
         console.log(json)
         restaurantsData.push(json)
       })
+      console.log("done scraping page " + currentPage)
       currentPage = currentPage + 1
 
       if(currentPage< 160){
         scrapeURL(curl + currentPage)
       }if(currentPage == 160){
-        jsonfile.writeFile(file, restaurantsData, function (err) {
-          console.error(err)
-        })
+        console.log("writing json to a file named resdata.json")
+        jsonfile.writeFileSync(file, restaurantsData)
       }
     }
   })
