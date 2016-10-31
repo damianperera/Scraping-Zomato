@@ -1,0 +1,11 @@
+{
+  "name"         : "Scraping Zomato",
+  "version"      : "0.0.1",
+  "description"  : "Scrape the Zomato.",
+  "main"         : "app.js",
+  "author"       : "Pramud Bommakanti",
+  "dependencies" : {
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
