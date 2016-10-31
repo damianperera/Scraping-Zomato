@@ -6,6 +6,7 @@
   "author"       : "Pramud Bommakanti",
   "dependencies" : {
     "request"    : "latest",
-    "cheerio"    : "latest"
+    "cheerio"    : "latest",
+    "jsonfile"   : "latest"
   }
 }
